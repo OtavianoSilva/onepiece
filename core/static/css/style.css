@@ -3,175 +3,215 @@ body {
     background: #fcf1b5;
 }
 
+a:link {
+  text-decoration: none;
+}
 
-.RD {
-    background-color: #dde2f7;
-    border-color: #adc1f8;
-  }
+.container {
+  display: grid;
+  grid-template-columns: repeat(20, 43px);
+  padding: 10px;
+}
+
+.grid-item {
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 6px;
+
+  width: 30px;
+  height: 30px;
+
+  min-height: 18px;
+  min-width: 18px;
   
-  .OT {
-    background-color: #b3cae2;
-    border-color: #adc1f8;
-  }
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.grid-item:hover .popup {
+  display: block;
+}
+
+.OT {
+  background-color: #b3cae2;
+  border-color: #adc1f8;
+}
   
-  .VS {
-    background-color: #8daad9;
-    border-color: #adc1f8;
-  }
-  
-  .BR {
-    background-color: #345595;
-    border-color: #adc1f8;
-  }
-  
-  .AP {
-    background-color: #1f3866;
-    border-color: #adc1f8;
-  }
-  
-  /* alabasta */
-  
-  .RMT {
-    background-color: #fcf4ce;
-    border-color: #fece78;
-  }
-  
-  .WP {
-    background-color: #fce798;
-    border-color: #fece78;
-  }
-  
-  .LG {
-    background-color: #ffd968;
-    border-color: #fece78;
-  }
-  
-  .DI { /* drum island */
-    background-color: #efaa09;
-    border-color: #fece78;
-  }
-  
-  .AB {
-    background-color: #cf9817;
-    border-color: #fece78;
-  }
-  
-  /* ilhas do céu */
-  
-  .JY {
-    background-color: #fe4e53;
-    border-color: #ff6f60;
-  }
-  
-  .SP { /* skypiea */
-    background-color: #c40300;
-    border-color: #ff6f60;
-  }
-  
-  /* water 7  */
-  
-  .LR {
-    background-color: #d2fdfa;
-    border-color: #86eaff;
-  }
-  
-  .W7 {
-    background-color: #02cefd;
-    border-color: #86eaff;
-  }
-  
-  .EL {
-    background-color: #079ac6;
-    border-color: #86eaff;
-  }
-  
-  .PEL {
-    background-color: #215074;
-    border-color: #86eaff;
-  }
-  
-  /* saga da derrota */
-  
-  .TB {
-    background-color: #64679d;
-    border-color: #695cff;
-    color: #FFFFFF;
-  }
-  
-  .SB {
-    background-color: #2da3aa;
-    border-color: #695cff;
-  }
-  
-  /* guerra dos melhores */
-  
-  .AL {
-    background-color: #c7e0b6;
-    border-color: #bfff71;
-  }
-  
-  .ID {
-    background-color: #a8d18a;
-    border-color: #bfff71;
-  }
-  
-  .MF {
-    background-color: #89ab62;
-    border-color: #bfff71;
-  }
-  
-  .PG {
-    background-color: #355221;
-    border-color: #bfff71;
-  }
-  
-  /* olha dos homens peixe */
-  
-  .RS {
-    background-color: #04caf5;
-    border-color: #8befff;
-  }
-  
-  .FMI {
-    background-color: #029ecd;
-    border-color: #8befff;
-  }
-  
-  /* dressrosa */
-  
-  .PH {
-    background-color: #ffe89a;
-    border-color: #ffe352;
-  }
-  
-  .DS {
-    background-color: #f8cc17;
-    border-color: #ffe352;
-  }
-  
-  /* quatro imperadores */
-  
-  .ZOU {
-    background-color: #fa9801;
-    border-color: #fe7d30;
-  }
-  
-  .WK {
-    background-color: #ff6706;
-    border-color: #fe7d30;
-  }
-  
-  .RV {
-    background-color: #cf4a41;
-    border-color: #a52d28;
-  }
-  
-  .WA {
-    background-color: #7a1f1e;
-    border-color: #a52d28;
-  }
-  
-  .EH {
-    background-color: #b35ad5;
-    border-color: #b700ff;
-  }
+.VS {
+  background-color: #8daad9;
+  border-color: #adc1f8;
+}
+
+.BR {
+  background-color: #345595;
+  border-color: #adc1f8;
+}
+
+.AP {
+  background-color: #1f3866;
+  border-color: #adc1f8;
+}
+
+/* alabasta */
+
+.RMT {
+  background-color: #fcf4ce;
+  border-color: #fece78;
+}
+
+.WP {
+  background-color: #fce798;
+  border-color: #fece78;
+}
+
+.LG {
+  background-color: #ffd968;
+  border-color: #fece78;
+}
+
+.DI { /* drum island */
+  background-color: #efaa09;
+  border-color: #fece78;
+}
+
+.alabasta {
+  background-color: #cf9817;
+  border-color: #fece78;
+}
+
+/* ilhas do céu */
+
+.JY {
+  background-color: #fe4e53;
+  border-color: #ff6f60;
+}
+
+.SP { /* skypiea */
+  background-color: #c40300;
+  border-color: #ff6f60;
+}
+
+/* water 7  */
+
+.LR {
+  background-color: #d2fdfa;
+  border-color: #86eaff;
+}
+
+.W7 {
+  background-color: #02cefd;
+  border-color: #86eaff;
+}
+
+.EL {
+  background-color: #079ac6;
+  border-color: #86eaff;
+}
+
+.PEL {
+  background-color: #215074;
+  border-color: #86eaff;
+}
+
+/* saga da derrota */
+
+.TB {
+  background-color: #64679d;
+  border-color: #695cff;
+  color: #FFFFFF;
+}
+
+.SB {
+  background-color: #2da3aa;
+  border-color: #695cff;
+}
+
+/* guerra dos melhores */
+
+.AL {
+  background-color: #c7e0b6;
+  border-color: #bfff71;
+}
+
+.ID {
+  background-color: #a8d18a;
+  border-color: #bfff71;
+}
+
+.MF {
+  background-color: #89ab62;
+  border-color: #bfff71;
+}
+
+.PG {
+  background-color: #355221;
+  border-color: #bfff71;
+}
+
+/* olha dos homens peixe */
+
+.RS {
+  background-color: #04caf5;
+  border-color: #8befff;
+}
+
+.FMI {
+  background-color: #029ecd;
+  border-color: #8befff;
+}
+
+/* dressrosa */
+
+.PH {
+  background-color: #ffe89a;
+  border-color: #ffe352;
+}
+
+.DS {
+  background-color: #f8cc17;
+  border-color: #ffe352;
+}
+
+/* quatro imperadores */
+
+.ZOU {
+  background-color: #fa9801;
+  border-color: #fe7d30;
+}
+
+.WK {
+  background-color: #ff6706;
+  border-color: #fe7d30;
+}
+
+.RV {
+  background-color: #cf4a41;
+  border-color: #a52d28;
+}
+
+.WA {
+  background-color: #7a1f1e;
+  border-color: #a52d28;
+}
+
+.EH {
+  background-color: #b35ad5;
+  border-color: #b700ff;
+}

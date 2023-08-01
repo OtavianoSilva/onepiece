@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -9,5 +10,12 @@
 </head>
 <body>
     <h1>One Piece Timeline</h1>
+    <div class="container">
+    {% for chap in chapters %}
+        <a href="https://onepieceex.net/mangas/leitor/{{ chap.number }}/#1">
+            <div class="grid-item" style="background-color:{{ chap.arc.background_color }}; border-color: {{ chap.arc.background_shadow }}">{{ chap.number }}</div>
+        </a>
+    {% endfor %}
+    </div>
 </body>
 </html>

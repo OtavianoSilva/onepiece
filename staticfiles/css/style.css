@@ -1,177 +1,129 @@
-
 body {
-    background: #fcf1b5;
+  background: #fcf1b5;
 }
 
+a:link {
+  text-decoration: none;
+}
 
-.RD {
-    background-color: #dde2f7;
-    border-color: #adc1f8;
-  }
+a {
+  color: black;
+}
+
+.select-media-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 40px;
+}
+
+.media-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.year-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+  align-items: center;
+  justify-items: center;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.year-container .year {
+  color: black;
+
+  text-align: center;
+  font-size: 18px;
   
-  .OT {
-    background-color: #b3cae2;
-    border-color: #adc1f8;
-  }
-  
-  .VS {
-    background-color: #8daad9;
-    border-color: #adc1f8;
-  }
-  
-  .BR {
-    background-color: #345595;
-    border-color: #adc1f8;
-  }
-  
-  .AP {
-    background-color: #1f3866;
-    border-color: #adc1f8;
-  }
-  
-  /* alabasta */
-  
-  .RMT {
-    background-color: #fcf4ce;
-    border-color: #fece78;
-  }
-  
-  .WP {
-    background-color: #fce798;
-    border-color: #fece78;
-  }
-  
-  .LG {
-    background-color: #ffd968;
-    border-color: #fece78;
-  }
-  
-  .DI { /* drum island */
-    background-color: #efaa09;
-    border-color: #fece78;
-  }
-  
-  .AB {
-    background-color: #cf9817;
-    border-color: #fece78;
-  }
-  
-  /* ilhas do céu */
-  
-  .JY {
-    background-color: #fe4e53;
-    border-color: #ff6f60;
-  }
-  
-  .SP { /* skypiea */
-    background-color: #c40300;
-    border-color: #ff6f60;
-  }
-  
-  /* water 7  */
-  
-  .LR {
-    background-color: #d2fdfa;
-    border-color: #86eaff;
-  }
-  
-  .W7 {
-    background-color: #02cefd;
-    border-color: #86eaff;
-  }
-  
-  .EL {
-    background-color: #079ac6;
-    border-color: #86eaff;
-  }
-  
-  .PEL {
-    background-color: #215074;
-    border-color: #86eaff;
-  }
-  
-  /* saga da derrota */
-  
-  .TB {
-    background-color: #64679d;
-    border-color: #695cff;
-    color: #FFFFFF;
-  }
-  
-  .SB {
-    background-color: #2da3aa;
-    border-color: #695cff;
-  }
-  
-  /* guerra dos melhores */
-  
-  .AL {
-    background-color: #c7e0b6;
-    border-color: #bfff71;
-  }
-  
-  .ID {
-    background-color: #a8d18a;
-    border-color: #bfff71;
-  }
-  
-  .MF {
-    background-color: #89ab62;
-    border-color: #bfff71;
-  }
-  
-  .PG {
-    background-color: #355221;
-    border-color: #bfff71;
-  }
-  
-  /* olha dos homens peixe */
-  
-  .RS {
-    background-color: #04caf5;
-    border-color: #8befff;
-  }
-  
-  .FMI {
-    background-color: #029ecd;
-    border-color: #8befff;
-  }
-  
-  /* dressrosa */
-  
-  .PH {
-    background-color: #ffe89a;
-    border-color: #ffe352;
-  }
-  
-  .DS {
-    background-color: #f8cc17;
-    border-color: #ffe352;
-  }
-  
-  /* quatro imperadores */
-  
-  .ZOU {
-    background-color: #fa9801;
-    border-color: #fe7d30;
-  }
-  
-  .WK {
-    background-color: #ff6706;
-    border-color: #fe7d30;
-  }
-  
-  .RV {
-    background-color: #cf4a41;
-    border-color: #a52d28;
-  }
-  
-  .WA {
-    background-color: #7a1f1e;
-    border-color: #a52d28;
-  }
-  
-  .EH {
-    background-color: #b35ad5;
-    border-color: #b700ff;
-  }
+  width: 63px;
+  height: 63px;
+  margin: 0;
+}
+
+.year-container a {
+  width: 63px;
+  height: 63px;
+}
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  position: relative;
+  grid-row-gap: 4px; 
+  grid-column-gap: 4px;
+}
+
+.grid-item {
+  display: block;
+  position: relative;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 6px;
+
+  width: 60px;
+  height: 60px;
+
+  word-break: break-all;
+
+  z-index: 0;
+}
+
+.grid-item:not(:has(.arc-name)) {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.hidden-p {
+  visibility: hidden;
+  display: none;
+  position: relative;
+  font-size: auto;
+}
+
+.grid-item p {
+  margin: 1px;
+  margin-top: 2px;
+}
+
+.grid-item:hover {
+  transform: scale(2.5);
+  transition: transform 0.3s ease;
+  font-size: auto;
+  z-index: 2;
+}
+
+.grid-item:hover .hidden-p{
+  visibility: visible;
+  display: block;
+  margin: 4px;
+  font-size: 7px;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.grid-item:hover .arc-name {
+  visibility: hidden;
+  display: none;
+}
+
+.grid-item:hover .number {
+  visibility: hidden;
+  display: none;
+}
+
+.saga-container {
+  text-align: left;
+  margin-left: 15px;
+}

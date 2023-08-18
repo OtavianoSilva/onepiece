@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>One Piece mangá timeline</title>
+</head>
+<body>
+    <center>
+    <h1>One Piece mangá Timeline</h1>
+
+    <div class="select-media-container">
+        <a href="{% url 'manga' %}" ><h2> Mangá </h2></a>
+        <a href="{% url 'anime' %}" ><h2> Anime </h2></a>
+    </div>
+
+    <div class="media-container">
+        <div class="year-container">
+            {% for y in years %}
+                <a href="{% url 'manga/year' y %}" ><div class="year" ><p>{{ y }}</p></div></a>
+            {% endfor %}
+        </div>
+
+        <div class="grid-view">
+            {% for obj in media %}
+                <a href="https://onepieceex.net/mangas/leitor/{{ obj.number }}/#1">
+                    <div class="grid-item" style="background-color:{{ obj.arc.background_color }}; border-color: {{ obj.arc.background_shadow }}">
+                        
+                        <p class="number" style="color:{{ obj.arc.text_color }}">{{ obj.number }}</p>
+
+                        {% ifchanged obj.arc.background_color %}
+                            <p class="arc-name" style="color:{{ obj.arc.text_color }}">{{ obj.arc.name }}</p>
+                        {% endifchanged %}
+
+                        <div class= "hidden-p">
+                            <p style="color:{{ obj.arc.text_color }}">{{ obj.title }}</p>
+                            <p style="color:{{ obj.arc.text_color }}">{{ obj.year }}</p>
+                        </div>
+
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+        <div class="saga-container">
+            {% for s in sagas %}
+                <a href="{% url 'manga/saga' s.id %}" ><h3>{{ s }}</h3></a>
+            {% endfor %}
+        </div>
+    </div>
+    </center>
+</body>
+</html>

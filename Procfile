@@ -1,1 +1,1 @@
-web: gunicorn core.wsgi --log-file -
+web: gunicorn one_piece_timeline_project.wsgi --log-file -

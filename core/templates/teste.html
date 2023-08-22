@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/teste_style.css' %}">
+    <meta charset="UTF-8">
+    <title>One Piece anime timeline</title>
+</head>
+<body>
+    <aside id="hidden-year" class="hidden-year">
+        <a href="" class="close-btn-year" onclick=closeNavYear()>&times;</a>
+        {% for y in years %}
+            <a href="#" >{{ y }}</a>
+        {% endfor %}
+    </aside>
+    
+    <aside id="hidden-saga" class="hidden-saga">
+        <a href="" class="close-btn-saga" onclick=closeNavSaga()>&times;</a>
+        {% for s in sagas %}
+            <a href="#" >{{ s }}</a>
+        {% endfor %}
+    </aside>
+
+    <section id="main" >
+        <h1>One Piece anime Timeline</h1>
+        <a href="#" onclick=openNavYear()>&#9776;</a>
+        <a href="#" onclick=openNavSaga()>&#9776;</a>
+    </section>
+
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

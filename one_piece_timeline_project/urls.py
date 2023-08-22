@@ -6,16 +6,13 @@ from core.views import MangaTimeLineView, AnimeTimeLineView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-
     path("", MangaTimeLineView.as_view()),
     path("manga", MangaTimeLineView.as_view(), name="manga"),
-    path("manga/year/<slug:slug>/", MangaTimeLineView.search_year, name="manga/year"),
-    path("manga/saga/<slug:slug>", MangaTimeLineView.search_saga, name="manga/saga"),
-    
+    path("manga/<slug:slug>", MangaTimeLineView.as_view(), name="manga/search"),
+
     path("anime", AnimeTimeLineView.as_view(), name="anime"),
     path("anime/nofillers", AnimeTimeLineView.nofiller, name="anime/nofillers"),
-    path("anime/year/<slug:slug>", AnimeTimeLineView.search_year, name="anime/year"),
-    path("anime/saga/<slug:slug>", AnimeTimeLineView.search_saga, name="anime/saga"),
+    path("anime/year/<slug:slug>", AnimeTimeLineView.as_view(), name="anime/search"),
 ]
 handler404 = 'core.views.error_404'
 

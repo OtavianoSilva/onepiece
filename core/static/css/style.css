@@ -52,7 +52,7 @@ a {
 
 .grid-view {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
+  grid-template-columns: repeat(17, 1fr);
   position: relative;
   grid-row-gap: 4px; 
   grid-column-gap: 4px;
@@ -126,4 +126,79 @@ a {
 .saga-container {
   text-align: left;
   margin-left: 15px;
+}
+
+.hidden-year {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  background-color: #fcf1b5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.hidden-year a {
+  display: block;
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  color:blueviolet;
+  font-size: large;
+  transition: 0.4s;
+}
+
+.hidden-year a:hover {
+  color: black;
+}
+
+.close-btn-year {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: larger;
+  margin-left: 50px;
+}
+
+.hidden-saga {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  background-color: #cdc077;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.hidden-saga a {
+  display: block;
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  color:blueviolet;
+  font-size: large;
+  transition: 0.4s;
+}
+
+.hidden-saga a:hover {
+  color: black;
+}
+
+.close-btn-saga {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: larger;
+  margin-left: 50px;
+}
+
+#main {
+  padding: 16px;
+  transition: margin-left 0.5s;
 }

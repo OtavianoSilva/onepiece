@@ -8,6 +8,21 @@
     <title>One Piece anime timeline</title>
 </head>
 <body>
+    <aside id="hidden-year" class="hidden-year">
+        <a href="" class="close-btn-year" onclick=closeNavYear()>&times;</a>
+        {% for y in years %}
+            <a href="{% url 'anime/search' y %}" ><h3>{{ y }}</h3></a>
+        {% endfor %}
+    </aside>
+
+    <aside id="hidden-saga" class="hidden-saga">
+        <a href="" class="close-btn-saga" onclick=closeNavSaga()>&times;</a>
+        {% for s in sagas %}
+                <a href="{% url 'anime/search' s.id %}" ><h3>{{ s }}</h3></a>
+        {% endfor %}
+    </aside>
+
+
     <center>
     <h1>One Piece anime Timeline</h1>
 
@@ -18,12 +33,9 @@
 
     <a href="{% url 'anime/nofillers' %}"><p> Remover Fillers </p></a>
 
-    <div class="media-container">
-        <div class="year-container">
-            {% for y in years %}
-                <a href="{% url 'anime/year' y %}" ><div class="year" ><p>{{ y }}</p></div></a>
-            {% endfor %}
-        </div>
+    <section id="main" class="media-container">
+        <a href="#" onclick=openNavYear()>&#9776;</a>
+        <a href="#" onclick=openNavSaga()>&#9776;</a>
 
         <div class="grid-view">
             {% for obj in media %}
@@ -45,13 +57,8 @@
                 </a>
             {% endfor %}
         </div>
-
-        <div class="saga-container">
-            {% for s in sagas %}
-                <a href="{% url 'anime/saga' s.id %}" ><h3>{{ s }}</h3></a>
-            {% endfor %}
-        </div>
-    </div>
+    </section>
     </center>
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

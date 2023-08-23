@@ -34,7 +34,7 @@
         <a href="#" onclick=openNavYear()>&#9776;</a>
         <a href="#" onclick=openNavSaga()>&#9776;</a>
 
-        <div class="grid-view">
+        <div id="grid" class="grid-view">
             {% for obj in media %}
                 <a href="https://onepieceex.net/mangas/leitor/{{ obj.number }}/#1">
                     <div class="grid-item" style="background-color:{{ obj.arc.background_color }}; border-color: {{ obj.arc.background_shadow }}">

@@ -9,7 +9,6 @@ class MangaTimeLineView(ListView):
     }
 
     def get(self, request, slug=None, *args, **kwargs):
-        print(type(slug))
         if slug is None:
             self.context["media"] = Chapter.objects.all()
         else:

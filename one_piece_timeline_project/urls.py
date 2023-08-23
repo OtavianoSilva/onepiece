@@ -12,7 +12,7 @@ urlpatterns = [
 
     path("anime", AnimeTimeLineView.as_view(), name="anime"),
     path("anime/nofillers", AnimeTimeLineView.nofiller, name="anime/nofillers"),
-    path("anime/year/<slug:slug>", AnimeTimeLineView.as_view(), name="anime/search"),
+    path("anime/<slug:slug>", AnimeTimeLineView.as_view(), name="anime/search"),
 ]
 handler404 = 'core.views.error_404'
 

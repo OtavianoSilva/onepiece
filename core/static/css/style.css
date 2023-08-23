@@ -8,6 +8,11 @@ a:link {
 
 a {
   color: black;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #669CB3;
 }
 
 .select-media-container {
@@ -136,7 +141,7 @@ a {
   top: 0;
   left: 0;
 
-  background-color: #fcf1b5;
+  background-color: #E6D39A;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -146,17 +151,17 @@ a {
   display: block;
   padding: 8px 8px 8px 30px;
   text-decoration: none;
-  color:blueviolet;
+  color:black;
   font-size: large;
   transition: 0.4s;
 }
 
 .hidden-year a:hover {
-  color: black;
+  color: #669CB3;
 }
 
 .close-btn-year {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 25px;
   font-size: larger;
@@ -171,7 +176,7 @@ a {
   top: 0;
   left: 0;
 
-  background-color: #cdc077;
+  background-color: #E6E29A;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -181,17 +186,17 @@ a {
   display: block;
   padding: 8px 8px 8px 30px;
   text-decoration: none;
-  color:blueviolet;
+  color:black;
   font-size: large;
   transition: 0.4s;
 }
 
 .hidden-saga a:hover {
-  color: black;
+  color: #669CB3;
 }
 
 .close-btn-saga {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 25px;
   font-size: larger;

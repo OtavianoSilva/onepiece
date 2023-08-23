@@ -1,7 +1,3 @@
-body {
-  background: #fcf1b5;
-}
-
 a:link {
   text-decoration: none;
 }
@@ -12,7 +8,7 @@ a {
 }
 
 a:hover {
-  color: #669CB3;
+  color: #46B34E;
 }
 
 .select-media-container {
@@ -58,6 +54,7 @@ a:hover {
 .grid-view {
   display: grid;
   grid-template-columns: repeat(17, 1fr);
+  margin-left: 34px;
   position: relative;
   grid-row-gap: 4px; 
   grid-column-gap: 4px;
@@ -141,7 +138,7 @@ a:hover {
   top: 0;
   left: 0;
 
-  background-color: #E6D39A;
+  background-color: #ff96bd;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -157,11 +154,11 @@ a:hover {
 }
 
 .hidden-year a:hover {
-  color: #669CB3;
+  color: #46B34E;
 }
 
 .close-btn-year {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 25px;
   font-size: larger;
@@ -176,7 +173,7 @@ a:hover {
   top: 0;
   left: 0;
 
-  background-color: #E6E29A;
+  background-color: #cffff1;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -192,11 +189,11 @@ a:hover {
 }
 
 .hidden-saga a:hover {
-  color: #669CB3;
+  color: #46B34E;
 }
 
 .close-btn-saga {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 25px;
   font-size: larger;
@@ -206,4 +203,16 @@ a:hover {
 #main {
   padding: 16px;
   transition: margin-left 0.5s;
+}
+
+.open-nav-year {
+  position: fixed;
+  left:18px;
+  top:50%;
+}
+
+.open-nav-saga {
+  position: fixed;
+  left: 18px;
+  top: 45%;
 }

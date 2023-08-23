@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>One Piece anime timeline</title>
 </head>
-<body>
+<body style="background:{{ bodycolor }};">
     <aside id="hidden-year" class="hidden-year">
         <a href="" class="close-btn-year" onclick=closeNavYear()>&times;</a>
         {% for y in years %}
@@ -34,9 +34,11 @@
     <a href="{% url 'anime/nofillers' %}"><p> Remover Fillers </p></a>
 
     <section id="main" class="media-container">
-        <a href="#" onclick=openNavYear()>&#9776;</a>
-        <a href="#" onclick=openNavSaga()>&#9776;</a>
-
+        <div class="nav-choise">
+            <a href="#" onclick=openNavYear() class="open-nav-year">&#9776;</a>
+            <a href="#" onclick=openNavSaga() class="open-nav-saga" >&#9776;</a>
+        </div>
+        
         <div class="grid-view">
             {% for obj in media %}
                 <a href="https://onepieceex.net/episodios/online/{{ obj.number }}/">

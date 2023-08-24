@@ -78,7 +78,7 @@ a:hover {
   min-width: 60px;
   min-height: 60px;
   width: auto;
-  height: auto;
+  height: auto + 10px;
 
   word-break: break-all;
 
@@ -267,4 +267,12 @@ a:hover {
 
 @media(max-width:550px){
   .grid-view { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media(min-height: 1000px){
+  .grid-view { grid-template-columns: repeat(7, 1fr); }
+}
+
+@media(min-height: 1100px){
+  .grid-view { grid-template-columns: repeat(6, 1fr); }
 }

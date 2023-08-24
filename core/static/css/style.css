@@ -269,10 +269,22 @@ a:hover {
   .grid-view { grid-template-columns: repeat(5, 1fr); }
 }
 
+@media(min-height: 800px){
+  .grid-view { grid-template-columns: repeat(9, 1fr); }
+}
+
+@media(min-height: 900px){
+  .grid-view { grid-template-columns: repeat(8, 1fr); }
+}
+
 @media(min-height: 1000px){
   .grid-view { grid-template-columns: repeat(7, 1fr); }
 }
 
 @media(min-height: 1100px){
   .grid-view { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media(min-height: 1200px){
+  .grid-view { grid-template-columns: repeat(5, 1fr); }
 }

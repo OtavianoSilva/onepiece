@@ -1,3 +1,7 @@
+body {
+  font-family:'Times New Roman', Times, serif;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -210,12 +214,14 @@ a:hover {
 }
 
 .open-nav-year {
+  writing-mode: vertical-lr;
   position: fixed;
   left:18px;
-  top:50%;
+  top:55%;
 }
 
 .open-nav-saga {
+  writing-mode: vertical-lr;
   position: fixed;
   left: 18px;
   top: 45%;
@@ -269,22 +275,18 @@ a:hover {
   .grid-view { grid-template-columns: repeat(5, 1fr); }
 }
 
-@media(min-height: 800px){
-  .grid-view { grid-template-columns: repeat(9, 1fr); }
-}
-
-@media(min-height: 900px){
+@media(min-height: 850px){
   .grid-view { grid-template-columns: repeat(8, 1fr); }
 }
 
-@media(min-height: 1000px){
+@media(min-height: 1050px){
   .grid-view { grid-template-columns: repeat(7, 1fr); }
 }
 
-@media(min-height: 1100px){
+@media(min-height: 1150px){
   .grid-view { grid-template-columns: repeat(6, 1fr); }
 }
 
-@media(min-height: 1200px){
+@media(min-height: 1300px){
   .grid-view { grid-template-columns: repeat(5, 1fr); }
 }

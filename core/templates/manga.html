@@ -9,14 +9,14 @@
 </head>
 <body style="background:{{ bodycolor }};">
     <aside id="hidden-year" class="hidden-year">
-        <a href="" class="close-btn-year" onclick=closeNavYear()>&times;</a>
+        <a href="#" class="close-btn-year" onclick=closeNavYear()>&times;</a>
         {% for y in years %}
             <a href="{% url 'manga/search' y %}" ><h3>{{ y }}</h3></a>
         {% endfor %}
     </aside>
 
     <aside id="hidden-saga" class="hidden-saga">
-        <a href="" class="close-btn-saga" onclick=closeNavSaga()>&times;</a>
+        <a href="#" class="close-btn-saga" onclick=closeNavSaga()>&times;</a>
         {% for s in sagas %}
                 <a href="{% url 'manga/search' s.id %}" ><h3>{{ s }}</h3></a>
         {% endfor %}
@@ -32,8 +32,8 @@
 
     <section id="main" class="media-container">
         <div class="nav-choise">
-            <a href="#" onclick=openNavYear() class="open-nav-year">&#9776;</a>
-            <a href="#" onclick=openNavSaga() class="open-nav-saga" >&#9776;</a>
+            <a href="#" onclick=openNavYear() class="open-nav-year">Anos</a>
+            <a href="#" onclick=openNavSaga() class="open-nav-saga" >Sagas</a>
         </div>
 
         <div id="grid" class="grid-view">

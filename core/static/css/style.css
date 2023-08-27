@@ -2,6 +2,10 @@ body {
   font-family:'Times New Roman', Times, serif;
 }
 
+h1{
+  text-align: center;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -25,41 +29,15 @@ a:hover {
 
 .media-container {
   display: flex;
-  align-items: flex-start;
-}
-
-.year-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 5px;
-  align-items: center;
-  justify-items: center;
-
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.year-container .year {
-  color: black;
-
   text-align: center;
-  font-size: 18px;
-  
-  width: 63px;
-  height: 63px;
-  margin: 0;
-}
-
-.year-container a {
-  width: 63px;
-  height: 63px;
+  align-items: flex-start;
 }
 
 .grid-view {
   display: grid;
   grid-template-columns: repeat(17, 1fr);
   flex-wrap: wrap;
-  margin-left: 34px;
+  margin: 0;
   position: relative;
   grid-row-gap: 4px; 
   grid-column-gap: 4px;
@@ -166,6 +144,7 @@ a:hover {
 }
 
 .close-btn-year {
+  font-size: large;
   position: absolute;
   top: 0;
   right: 25px;
@@ -202,6 +181,7 @@ a:hover {
 
 .close-btn-saga {
   position: absolute;
+  font-size: large;
   top: 0;
   right: 25px;
   font-size: larger;
@@ -211,6 +191,11 @@ a:hover {
 #main {
   padding: 16px;
   transition: margin-left 0.5s;
+}
+
+.nav-choise {
+  margin-right: 40px;
+  font-size: 23px;
 }
 
 .open-nav-year {
@@ -275,18 +260,30 @@ a:hover {
   .grid-view { grid-template-columns: repeat(5, 1fr); }
 }
 
-@media(min-height: 850px){
+@media(min-height: 900px){
   .grid-view { grid-template-columns: repeat(8, 1fr); }
+  .nav-choise {
+    font-size: 30px;
+  }
 }
 
-@media(min-height: 1050px){
+@media(min-height: 1100px){
   .grid-view { grid-template-columns: repeat(7, 1fr); }
+  .nav-choise {
+    font-size: 33px;
+  }
 }
 
-@media(min-height: 1150px){
+@media(min-height: 1200px){
   .grid-view { grid-template-columns: repeat(6, 1fr); }
+  .nav-choise {
+    font-size: 36px;
+  }
 }
 
 @media(min-height: 1300px){
   .grid-view { grid-template-columns: repeat(5, 1fr); }
+  .nav-choise {
+    font-size: 39px;
+  }
 }

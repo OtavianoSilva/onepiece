@@ -4,7 +4,7 @@ from django.views.generic import ListView
 
 class MangaTimeLineView(ListView):
     context = {
-        "years": range(1997, 2024),
+        "years": range(1997, 2025),
         "sagas" : Saga.objects.all()
     }
 
@@ -13,7 +13,7 @@ class MangaTimeLineView(ListView):
             self.context["bodycolor"]= "#ffe797"
             self.context["media"] = Chapter.objects.all()
         else:
-            if int(slug) in range(1997, 2024):
+            if int(slug) in range(1997, 2025):
                 self.context["bodycolor"] = "#ff96bd"
                 self.context["media"] = Chapter.objects.filter(year=slug)
             else:
@@ -28,7 +28,7 @@ class MangaTimeLineView(ListView):
 
 class AnimeTimeLineView(ListView):
     context = {
-        "years": range(1999, 2024),
+        "years": range(1999, 2025),
         "sagas" : Saga.objects.all()
     }
 
@@ -37,7 +37,7 @@ class AnimeTimeLineView(ListView):
             self.context["bodycolor"]= "#ffe797"
             self.context["media"] = Episode.objects.all()
         else:
-            if int(slug) in range(1999, 2024):
+            if int(slug) in range(1999, 2025):
                 self.context["bodycolor"] = "#ff96bd"
                 self.context["media"] = Episode.objects.filter(year=slug)
             else:
@@ -52,7 +52,7 @@ class AnimeTimeLineView(ListView):
     def nofiller(request):
 
         context = {
-            "years": range(1999, 2024),
+            "years": range(1999, 2025),
             "media" : Episode.objects.exclude(arc__filler=True),
             "sagas" : Saga.objects.all()
         }

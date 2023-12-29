@@ -1,19 +1,13 @@
 
 from django.contrib import admin
-from django.urls import path
-from core.views import MangaTimeLineView, AnimeTimeLineView
+from django.urls import path, include
+from core.views.site import MangaTimeLineView, AnimeTimeLineView
 # import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", MangaTimeLineView.as_view()),
-    path("manga", MangaTimeLineView.as_view(), name="manga"),
-    path("manga/<slug:slug>", MangaTimeLineView.as_view(), name="manga/search"),
-
-    path("anime", AnimeTimeLineView.as_view(), name="anime"),
-    path("anime/nofillers", AnimeTimeLineView.nofiller, name="anime/nofillers"),
-    path("anime/<slug:slug>", AnimeTimeLineView.as_view(), name="anime/search"),
+    path("", include("core.urls"))
 ]
-handler404 = 'core.views.error_404'
+handler404 = 'core.views.site.error_404'
 
 # urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Saga, Arc, Chapter, Episode
+from ..models import Saga, Arc, Chapter, Episode
 from django.views.generic import ListView
 
 class MangaTimeLineView(ListView):
